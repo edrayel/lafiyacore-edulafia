@@ -1,0 +1,1 @@
+"""Alumni module for EduLafia."""

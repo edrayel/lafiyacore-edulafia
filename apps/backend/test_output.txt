@@ -1,0 +1,6 @@
+ImportError while loading conftest '/Users/edrayel/GitHub/edward_rajah/lafiyacore-edulafia/apps/backend/tests/conftest.py'.
+tests/conftest.py:12: in <module>
+    from edulafia.core.security import create_access_token, create_user_token_payload
+src/edulafia/core/security.py:4: in <module>
+    from datetime import timezone, UTC, datetime, timedelta
+E   ImportError: cannot import name 'UTC' from 'datetime' (/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/datetime.py)

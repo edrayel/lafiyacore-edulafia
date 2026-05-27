@@ -1,0 +1,60 @@
+# Git
+.git
+.gitignore
+.gitattributes
+.gitkeep
+
+# Environment files (secrets)
+.env
+.env.local
+.env.*.local
+.env.example
+
+# Dependencies (installed inside containers)
+node_modules/
+.pnpm-store/
+.venv
+__pycache__/
+*.pyc
+
+# Build output
+dist/
+build/
+*.egg-info/
+htmlcov/
+.coverage
+.pytest_cache/
+.turbo/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docs
+README.md
+**/README.md
+CONTRIBUTING.md
+LICENSE
+
+# Terraform (infrastructure, not needed for app builds)
+terraform/
+
+# Nginx reverse proxy config (not needed for app builds)
+nginx/
+
+# Scripts
+scripts/
+docker-compose*.yml
+
+# Website (separate build)
+website/
+
+# Logs
+*.log
+logs/

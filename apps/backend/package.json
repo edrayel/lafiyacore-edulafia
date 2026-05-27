@@ -1,0 +1,10 @@
+{
+  "name": "@edulafia/backend",
+  "private": true,
+  "scripts": {
+    "dev": "uv run uvicorn edulafia.main:app --reload",
+    "test": "uv run pytest --cov=src --cov-report=xml --cov-fail-under=80 -m \"not slow and not e2e\"",
+    "lint": "uv run ruff check src/",
+    "type-check": "uv run mypy src/ --ignore-missing-imports"
+  }
+}

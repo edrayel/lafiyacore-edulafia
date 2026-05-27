@@ -1,0 +1,6 @@
+[test]
+preload = ["./setup-bun.ts", "./src/setupTests.ts"]
+coverage = false
+
+[test.coverage]
+reporter = "text"

@@ -1,0 +1,47 @@
+http:
+  middlewares:
+    edulafia-strip-db:
+      stripPrefix:
+        prefixes:
+          - "/db"
+
+  routers:
+    edulafia-frontend:
+      rule: "Host(`edulafia-app.lafiyacore.com`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: cf
+      service: edulafia-frontend
+
+    edulafia-backend:
+      rule: "Host(`edulafia-app.lafiyacore.com`) && PathPrefix(`/api`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: cf
+      service: edulafia-backend
+
+    edulafia-couchdb:
+      rule: "Host(`edulafia-app.lafiyacore.com`) && PathPrefix(`/db`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: cf
+      service: edulafia-couchdb
+      middlewares:
+        - edulafia-strip-db
+
+  services:
+    edulafia-frontend:
+      loadBalancer:
+        servers:
+          - url: "http://172.21.0.1:18080"
+    edulafia-backend:
+      loadBalancer:
+        servers:
+          - url: "http://172.21.0.1:18000"
+    edulafia-couchdb:
+      loadBalancer:
+        servers:
+          - url: "http://172.21.0.1:15984"

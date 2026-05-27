@@ -1,0 +1,47 @@
+[project]
+name = "edulafia-workspace"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["apps/backend"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "pytest-asyncio>=0.24",
+    "pytest-mock>=3.14",
+    "freezegun>=1.4",
+    "ruff>=0.8",
+    "mypy>=1.13",
+    "pre-commit>=4.0",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["apps/backend/src", "apps/backend/tests"]
+
+[tool.ruff.lint]
+select = [
+    "F821",  # undefined name
+]
+ignore = ["S101"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["edulafia"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
