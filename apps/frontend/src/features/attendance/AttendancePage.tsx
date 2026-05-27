@@ -26,7 +26,8 @@ import {
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { DEFAULT_CLASS_OPTIONS } from '@/shared/config/constants';
+import { DEFAULT_CLASS_OPTIONS }
+import { SkeletonPage } from "@/shared/components/SkeletonPage"; from '@/shared/config/constants';
 import {
   Save as SaveIcon,
   CheckCircle,

@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate, Link } from "@tanstack/react-router";
 import {
   Box,
   Typography,
@@ -153,20 +153,20 @@ export function LoginPage() {
       <Typography
         variant="body2"
         align="center"
-        onClick={() => navigate({ to: "/forgot-password" })}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") navigate({ to: "/forgot-password" }); }}
-        sx={{
-          mt: 2,
-          color: "#64748b",
-          cursor: "pointer",
-          transition: "color 0.2s",
-          "&:hover": { color: "#0f172a" },
-          "&:focus-visible": { outline: "2px solid #2563eb", outlineOffset: "4px", borderRadius: "4px" },
-        }}
+        sx={{ mt: 2, color: "#64748b" }}
       >
-        Forgot your password? Reset password
+        <Link
+          to="/forgot-password"
+          style={{
+            color: "inherit",
+            textDecoration: "none",
+            transition: "color 0.2s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#0f172a")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}
+        >
+          Forgot your password? Reset password
+        </Link>
       </Typography>
     </AuthLayout>
   );

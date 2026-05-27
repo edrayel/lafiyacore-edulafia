@@ -28,7 +28,8 @@ import { DataGrid, type GridColDef } from '@mui/x-data-grid';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { getStudents, archiveStudent, batchImportStudents } from './api';
 import type { Student } from '@/shared/types';
-import { DataEmptyState } from '@/shared/components/DataEmptyState';
+import { DataEmptyState }
+import { SkeletonPage } from "@/shared/components/SkeletonPage"; from '@/shared/components/DataEmptyState';
 import { DataErrorAlert } from '@/shared/components/DataErrorAlert';
 import { DEFAULT_CLASS_OPTIONS } from '@/shared/config/constants';
 import { CreateStudentDialog } from './components/CreateStudentDialog';

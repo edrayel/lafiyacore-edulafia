@@ -54,7 +54,8 @@ import {
 import { VaccinationsDialog } from './VaccinationsDialog';
 import { HealthProfileForm } from './HealthProfileForm';
 import { BatchScreeningsDialog } from './BatchScreeningsDialog';
-import { DataEmptyState } from '@/shared/components/DataEmptyState';
+import { DataEmptyState }
+import { SkeletonPage } from "@/shared/components/SkeletonPage"; from '@/shared/components/DataEmptyState';
 import { useTabState } from '@/shared/hooks/useTabState';
 import { DataErrorAlert } from '@/shared/components/DataErrorAlert';
 

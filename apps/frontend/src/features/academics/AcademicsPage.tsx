@@ -39,7 +39,8 @@ import {
 
 import { GradeEntryGrid } from './GradeEntryGrid';
 import { ReportCardPreview } from './ReportCardPreview';
-import { DataEmptyState } from '@/shared/components/DataEmptyState';
+import { DataEmptyState }
+import { SkeletonPage } from "@/shared/components/SkeletonPage"; from '@/shared/components/DataEmptyState';
 import { useTabState } from '@/shared/hooks/useTabState';
 import { DataErrorAlert } from '@/shared/components/DataErrorAlert';
 import { useToastStore } from '@/shared/stores/toastStore';

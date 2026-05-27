@@ -41,7 +41,8 @@ import {
 } from './api';
 import type { StaffMember, CreateStaffAssignmentPayload } from './api';
 import { getAcademicMetadata, getClasses, getSubjects, type AcademicClass, type Subject } from '../academics/api';
-import { DataEmptyState } from '@/shared/components/DataEmptyState';
+import { DataEmptyState }
+import { SkeletonPage } from "@/shared/components/SkeletonPage"; from '@/shared/components/DataEmptyState';
 import { DataErrorAlert } from '@/shared/components/DataErrorAlert';
 
 const roleColors: Record<string, 'primary' | 'secondary' | 'success' | 'warning' | 'info'> = {

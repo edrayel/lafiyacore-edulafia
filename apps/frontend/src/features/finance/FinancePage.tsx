@@ -49,7 +49,8 @@ import { CreateFeeScheduleDialog } from './components/CreateFeeScheduleDialog';
 import { RecordPaymentDialog } from './components/RecordPaymentDialog';
 import { InitiateOnlinePaymentDialog } from './components/InitiateOnlinePaymentDialog';
 import { ReversePaymentDialog } from './components/ReversePaymentDialog';
-import { DataEmptyState } from '@/shared/components/DataEmptyState';
+import { DataEmptyState }
+import { SkeletonPage } from "@/shared/components/SkeletonPage"; from '@/shared/components/DataEmptyState';
 import { useTabState } from '@/shared/hooks/useTabState';
 import { AddScholarshipDialog } from './components/AddScholarshipDialog';
 

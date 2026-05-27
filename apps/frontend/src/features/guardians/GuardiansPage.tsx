@@ -27,7 +27,8 @@ import { DataGrid, type GridColDef } from '@mui/x-data-grid';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { getGuardians, updateGuardian, archiveGuardian } from './api';
 import type { Guardian } from '@/shared/types';
-import { DataEmptyState } from '@/shared/components/DataEmptyState';
+import { DataEmptyState }
+import { SkeletonPage } from "@/shared/components/SkeletonPage"; from '@/shared/components/DataEmptyState';
 import { useDebounce } from '@/shared/hooks/useDebounce';
 
 export function GuardiansPage() {
